@@ -28,6 +28,7 @@ class CurrencyViewModelTest {
     @Test
     fun testValidInput() {
         runTest {
+
             whenever(currencyUseCase.invoke(anyInt(), anyString(), anyString())).thenReturn(
                 ConvertResponseModel(null, null, null, null, null, null, true)
             )
