@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.siddroid.currencyconverter.ui.CurrencyViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="textChangeListener"
+            type="androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged" />
+
+        <variable
+            name="isAutoText"
+            type="Boolean" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <Spinner
+        android:id="@+id/spnFrom"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@id/btnExchange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edtAmount"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginEnd="20dp"/>
+
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        tools:text="5555555555"
+        android:maxLength="9"
+        android:digits="01234456789"
+        android:inputType="numberDecimal"
+        app:layout_constraintWidth_min="60dp"
+        app:layout_constraintTop_toBottomOf="@id/spnFrom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnExchange"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/btnExchange"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="&lt;--&gt;"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="@{clickHandler::onClick}"/>
+
+    <Spinner
+        android:id="@+id/spnTo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@id/btnExchange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edtConversion"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginStart="20dp"/>
+
+    <EditText
+        android:id="@+id/edtConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        tools:text="5555555555"
+        android:maxLength="9"
+        android:inputType="numberDecimal"
+        app:layout_constraintWidth_min="60dp"
+        app:layout_constraintTop_toBottomOf="@id/spnTo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnExchange"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Previous Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtAmount"
+        android:layout_marginTop="10dp"
+        android:onClick="@{clickHandler::onClick}"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
