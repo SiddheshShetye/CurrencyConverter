@@ -3,6 +3,7 @@ package com.siddroid.currencyconverter.ui
 import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.siddroid.currencyconverter.data.model.ConvertResponseModel
 import com.siddroid.currencyconverter.domain.CurrencyConversionUseCase
+import com.siddroid.currencyconverter.ui.viewmodel.CurrencyViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Rule

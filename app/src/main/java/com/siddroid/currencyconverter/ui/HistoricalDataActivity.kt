@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.siddroid.currencyconverter.core.network.InternetConnectivity
 import com.siddroid.currencyconverter.databinding.ActivityHistoricalDataBinding
 import com.siddroid.currencyconverter.ui.adapters.HistoricalDataAdapter
+import com.siddroid.currencyconverter.ui.viewmodel.HistoricalDataViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

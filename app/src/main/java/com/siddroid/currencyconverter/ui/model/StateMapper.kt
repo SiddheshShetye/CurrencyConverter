@@ -1,4 +1,4 @@
-package com.siddroid.currencyconverter.ui
+package com.siddroid.currencyconverter.ui.model
 
 import com.siddroid.currencyconverter.data.db.Transactions
 import java.text.SimpleDateFormat

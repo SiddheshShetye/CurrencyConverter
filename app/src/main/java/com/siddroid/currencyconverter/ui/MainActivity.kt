@@ -20,6 +20,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.siddroid.currencyconverter.R
 import com.siddroid.currencyconverter.core.network.InternetConnectivity
 import com.siddroid.currencyconverter.databinding.ActivityMainBinding
+import com.siddroid.currencyconverter.ui.viewmodel.CurrencyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.awaitClose
@@ -114,7 +115,9 @@ class MainActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 currencyViewModel.errorState.collect {
                     if (it.isBlank()) {
-                        Toast.makeText(this@MainActivity, it, Toast.LENGTH_LONG).show()
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(this@MainActivity, it, Toast.LENGTH_LONG).show()
+                        }
                     }
                 }
             }

@@ -3,7 +3,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.siddroid.currencyconverter.ui.CurrencyViewModel" />
+            type="com.siddroid.currencyconverter.ui.viewmodel.CurrencyViewModel" />
 
         <variable
             name="clickHandler"

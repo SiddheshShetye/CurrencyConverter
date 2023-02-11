@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.siddroid.currencyconverter.BR
 import com.siddroid.currencyconverter.R
 import com.siddroid.currencyconverter.databinding.ItemHistoryBinding
-import com.siddroid.currencyconverter.ui.HistoryViewState
+import com.siddroid.currencyconverter.ui.model.HistoryViewState
 
 class HistoricalDataAdapter: Adapter<HistoricalItemViewHolder>() {
 

@@ -3,7 +3,7 @@
     <data>
         <variable
             name="transaction"
-            type="com.siddroid.currencyconverter.ui.HistoryViewState" />
+            type="com.siddroid.currencyconverter.ui.model.HistoryViewState" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

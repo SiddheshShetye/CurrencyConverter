@@ -1,8 +1,10 @@
-package com.siddroid.currencyconverter.ui
+package com.siddroid.currencyconverter.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.siddroid.currencyconverter.domain.CurrencyHistoryUseCase
+import com.siddroid.currencyconverter.ui.model.HistoryViewState
+import com.siddroid.currencyconverter.ui.model.StateMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
